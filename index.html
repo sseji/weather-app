@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        color: rgb(51, 51, 77);
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        color: rgb(51, 51, 77);
+        list-style: none;
+      }
+
+      p {
+        color: rgb(51, 51, 77);
+        font-size: 30px;
+      }
+
+      .weatherapp {
+        border: 1px solid rgb(47, 47, 51);
+        padding: 15px;
+        margin: 20px auto;
+        max-width: 600px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weatherapp">
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Search a location..."
+            autofocus="on"
+            autocomplete="off"
+            id="city-input"
+            class="form-control col-9"
+          />
+          <input
+            type="submit"
+            value="search"
+            class="form-control btn btn-primary col-3"
+          />
+        </form>
+        <h1 id="city">Paris, France</h1>
+        <ul>
+          <li>Cloudy</li>
+          <li id="date">Friday 18:00</li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <p id="temperature"><strong>10*C</strong></p>
+            <img
+              src="https://cdn.pixabay.com/photo/2014/04/03/11/56/clouds-312651_960_720.png"
+              alt="Cloudy icon"
+            />
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Precipitation: 10%</li>
+              <li>Humidity: 20%</li>
+              <li>Wind: 5kmph</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
